@@ -1,1 +1,16 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-color: #000;
+    --desktop-width: clamp(375px, 100%, 700px);
+    --mobile-width: 100%;
+    --font-main: 'Inter-Variable', serif;
+    --font-decor: 'PressStart2P';
+    --content-weight: 400;
+    --title-weight: 700;
+    --background-color: #fff;
+    --background-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px),
+                        repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px),
+                        linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+    --main-heart-color: #FF0000;
+    
+}
