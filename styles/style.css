@@ -36,18 +36,14 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  /* font-family: var(--font-main); */
+  font-family: var(--font-main);
 }
-/* 
-.block {
-  inline-size: var(--desktop-width);
-} */
+
 
 .header {
-  /* display: block; */
   background-color: var(--background-color);
   margin: 100px auto;
-  border: 2px solid #000;
+  padding-block: clamp(128px, 5vw, 60px);
   inline-size: var(--desktop-width);
   text-align: center;
   border: 2px solid currentColor;
@@ -56,14 +52,14 @@
 }
 
 .header__title {
-  font-family: var(--font-decor);
-  font-weight: var(--title-weight);
+  font-family: var(--font-decor), sans-serif;
+  font-weight: var(--content-weight);
   font-size: 65px;
-  margin: 0;
+  
 }
 
 .header__subtitle {
-  font-family: var(--font-decor);
+  font-family: var(--font-decor), sans-serif;
   font-weight: var(--content-weight);
   font-size: 23px;
   text-transform: uppercase;
@@ -89,13 +85,14 @@
   font-family: var(--font-main);
   font-size: 18px;
   font-weight: var(--title-weight);
-  padding: 3px 24px 3px 10px;
+  padding: 5px 10px;
 }
 
 .card__image-block {
   position: relative;
   width: clamp(375px, 100%, 700px);
-  border: 2px solid #000;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
 }
 
 .card__image {
@@ -154,8 +151,6 @@
 .label {
   font-family: var(--font-decor);
   font-size: 14px;
-  /* text-transform: uppercase; */
-
   position: absolute;
   top: 25px;
   right: 25px;
@@ -183,7 +178,6 @@
   transition: border 0.3s ease;
 }
 
-/* проверить!!! */
 .box-shadow:focus-visible {
   outline: none;
   box-shadow: 2px 2px var(--main-color);
@@ -261,8 +255,6 @@
 .save-button {
   gap: 8px;
   padding: 15px 20px;
-  /* display: flex;
-  flex-shrink: 0; */
 }
 
 .save-button__image {
@@ -399,9 +391,27 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+  .header {
+    width: clamp(300px, 100%, 375px);
+    padding-block: clamp(120px, 5vw, 60px);
+  }
+
+  .header__title {
+    font-size: 49px;
+  }
+
+  .header__subtitle {
+    font-size: 14px;
+  }
+
+  .main {
+    inline-size: 100%;
+    box-sizing: border-box;
+  }
+
   .label {
-    top: 23px;
-    right: 15px;
+    top: 25px;
+    right: 13px;
   }
 
   .card__image-block {
