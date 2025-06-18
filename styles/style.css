@@ -229,8 +229,8 @@
   overflow: hidden;
 }
 
-.button-hover-animation:before {
-  content: "";
+.button-hover-animation::before {
+  content: '';
   position: absolute;
   background-color: #000;
   top: 0;
@@ -326,7 +326,7 @@ dialog::backdrop {
 }
 
 .contour {
-  fill: var(--contour-color);
+  fill: var(--main-color);
   transition: fill 0.1s linear;
 }
 
@@ -341,7 +341,7 @@ dialog::backdrop {
 }
 
 .sparks {
-  fill: var(--animation-fill-color);
+  fill: var(--main-heart-color);
   opacity: 0;
 }
 
@@ -365,27 +365,27 @@ dialog::backdrop {
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon .is-like .contour {
+.like-icon.is-liked .contour {
   fill: var(--main-heart-color);
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon .is-like .core {
+.like-icon.is-liked .core {
   fill: var(--main-heart-color);
   transition: fill 0.3s linear;
 }
 
-.like-icon .is-like .main-body {
+.like-icon.is-liked .main-body {
   fill: var(--main-heart-color);
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon .is-like .heart {
+.like-icon.is-liked .heart {
   transform-origin: center;
   animation: scale 0.3s ease-in 0.1s;
 }
 
-.like-icon .is-like .sparks {
+.like-icon.is-liked .sparks {
   transform-origin: center;
   animation: sparks 0.3s ease-in 0.3s;
 }
@@ -394,7 +394,6 @@ dialog::backdrop {
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   label {
     -webkit-text-stroke: 1px #fff;
-    /* text-stroke: 1px #fff; */
     text-shadow: none;
   }
 }
